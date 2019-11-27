@@ -26,21 +26,21 @@ public class base64 {
 
 
 
-//    String base64msg = "663c91b4ab5fec549a39d4b453cdc7d8d3974f311615a48f8fd0d6a72b482ca7e1aa2f3aa3ab8e9e2889ffbe2afbc099b31b1273c018622a7f8735a56dabf91b";
+//    String base64msg = "67226404106de8cd30328d66efe97d94307cc7e44e9b45c3c7f7f6728aa8fb1ed76ea4485ddfbbb2750f168277215b6a66a09e4a5628d6960bcad375aabb4398";
 //    String anw = base64Decode(base64msg);
-//        System.out.println(anw);
+//        System.out.println( "decrpyt : " + anw);
 //        String msg = base64Encode(anw);
-//        System.out.println(msg);
+//        System.out.println( "encrypt : " + msg);
 
         //encrypt
-//        String EncryptStr = "Y";
+//        String EncryptStr = "192.168.122.66";
 //        try {
 //            EncryptStr = doEncrypt(EncryptStr);
 //            System.out.println(EncryptStr);
 //        }catch (Exception e) { e.printStackTrace();}
 
         //decode
-        String DecryptStr = "YsDZPua+jLWt/ChO35cl9w==";
+        String DecryptStr = "F/oOAR841At0s9iIfJ56mg==";
         try {
             DecryptStr = doDecryptString(DecryptStr);
             System.out.println(DecryptStr);
