@@ -4,17 +4,16 @@ public class alksvndlaksdvnlkasdTeest {
 
     public static void main(String args[]){
 
-        String a ="aa";
+        String[] a = {"asd",
+        "fgh",
+        "jkl",
+        "qwe",
+        "\\\\"};
 
-        String b = "";
 
-        if(b.split("@@") == null)
-            System.out.println("b = null");
-        else {
-            String[] arr = b.split("@@");
+        System.out.println(a.length);
+        System.out.println(a[4]);
 
-            for (int i = 0; i < arr.length; i++)
-                System.out.println(arr[i]);
-        }
+
     }
 }

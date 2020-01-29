@@ -21,32 +21,35 @@ public class base64 {
 
 
         //csp 비번 변경.
-//        String sePasswd = char2Security("1234");
-//        System.out.println(sePasswd);
+        String sePasswd = char2Security("under5001");
+        System.out.println(sePasswd);
 
 
 
-//    String base64msg = "67226404106de8cd30328d66efe97d94307cc7e44e9b45c3c7f7f6728aa8fb1ed76ea4485ddfbbb2750f168277215b6a66a09e4a5628d6960bcad375aabb4398";
-//    String anw = base64Decode(base64msg);
+//    String base64msg = "29608474dfb0b2299781c834d82181273aea480cfb612b7a74ee00b46edaeecd533ef18745c601da9b5c14809d9f0f8bccd09491d1471add4b1eb84b316e5b25";
+//    String anw = base64Decode(sePasswd);
 //        System.out.println( "decrpyt : " + anw);
-//        String msg = base64Encode(anw);
+//        String msg = base64Encode(sePasswd);
 //        System.out.println( "encrypt : " + msg);
 
         //encrypt
-//        String EncryptStr = "192.168.122.66";
+//        String EncryptStr = "192.168.122.198";
 //        try {
 //            EncryptStr = doEncrypt(EncryptStr);
 //            System.out.println(EncryptStr);
 //        }catch (Exception e) { e.printStackTrace();}
 
         //decode
-        String DecryptStr = "F/oOAR841At0s9iIfJ56mg==";
+        String DecryptStr = "09VaNYHCr7PQcx2djlDjMw==";
         try {
             DecryptStr = doDecryptString(DecryptStr);
             System.out.println(DecryptStr);
         }catch (Exception e){ e.printStackTrace();}
 
     }
+
+//    Dc01SOvDkizkVCBr6mDRcw==
+//    famhas51wk9ly5rnI3NbHQ==
 
 
     public static String doDecryptString(String encryptString) {
