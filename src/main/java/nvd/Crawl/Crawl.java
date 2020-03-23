@@ -19,11 +19,11 @@ public class Crawl {
     public File unzip(File zipFile, File unZipFile) throws Exception {
         byte[] buffer = new byte[1024];
         File newFile = null;
-        try(ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFile))){
+        try (ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFile))) {
             ZipEntry zipEntry = zis.getNextEntry();
             while (zipEntry != null) {
                 newFile = unZipFile;
-                try(FileOutputStream fos = new FileOutputStream(newFile)){
+                try (FileOutputStream fos = new FileOutputStream(newFile)) {
                     int len;
                     while ((len = zis.read(buffer)) > 0) {
                         fos.write(buffer, 0, len);

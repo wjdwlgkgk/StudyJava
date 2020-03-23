@@ -10,7 +10,7 @@ public class JacksonTest {
 
 
         ObjectMapper objectMapper = new ObjectMapper();
-        Person person = new Person("Nicole",20);
+        Person person = new Person("Nicole", 20);
 
 
         String personJson = objectMapper.writeValueAsString(person);

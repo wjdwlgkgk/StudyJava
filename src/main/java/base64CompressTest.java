@@ -26,11 +26,10 @@ public class base64CompressTest {
         definitiEntry(unzipStr);
 
 
-
     }
 
 
-    private static Document parseXML(File file){
+    private static Document parseXML(File file) {
         DocumentBuilderFactory factory = null;
         DocumentBuilder builder = null;
         Document doc = null;
@@ -40,13 +39,13 @@ public class base64CompressTest {
 
             doc = builder.parse(file);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return doc;
     }
 
-    public static String unzip(final byte[] compressed) throws IllegalArgumentException{
+    public static String unzip(final byte[] compressed) throws IllegalArgumentException {
         if ((compressed == null) || (compressed.length == 0)) {
             throw new IllegalArgumentException("Cannot unzip null or empty bytes");
         }
@@ -60,14 +59,14 @@ public class base64CompressTest {
                     try (BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
                         StringBuilder output = new StringBuilder();
                         String line;
-                        while((line = bufferedReader.readLine()) != null){
+                        while ((line = bufferedReader.readLine()) != null) {
                             output.append(line);
                         }
                         return output.toString();
                     }
                 }
             }
-        } catch(IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException("Failed to unzip content", e);
         }
     }
@@ -80,7 +79,7 @@ public class base64CompressTest {
 
     public static void definitiEntry(String data) throws XMLStreamException {
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-        try(InputStream in = new ByteArrayInputStream(data.getBytes())) {
+        try (InputStream in = new ByteArrayInputStream(data.getBytes())) {
             XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
             XMLEventWriter xw = null;
             StringWriter sw = null;
@@ -96,14 +95,14 @@ public class base64CompressTest {
                 XMLEvent e = eventReader.nextEvent();
 
                 String eParse = e.toString();
-                if(eParse.contains("’")){
+                if (eParse.contains("’")) {
 
                 }
 
 //                byte[] bytes = String.valueOf(e).getBytes();
 //                output.write(bytes);
 
-                if(String.valueOf(e).contains("CVE-2017-5378")){
+                if (String.valueOf(e).contains("CVE-2017-5378")) {
                     System.out.println(String.valueOf(e));
                 }
                 if (isStartEle("results", e)) {
@@ -150,7 +149,7 @@ public class base64CompressTest {
 //            hmap.put("asset_seq", asset_seq);
 //            insertResultRepository.updateChkGrpOvalRslt(hmap);
 //            output.close();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -9,20 +9,20 @@ import java.util.StringTokenizer;
 
 public class S7810 {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int T = Integer.parseInt(br.readLine());
 
-        for(int Test = 1; Test<=T; Test++){
+        for (int Test = 1; Test <= T; Test++) {
             int count = 0;
             int su = Integer.parseInt(br.readLine());
             String str = br.readLine();
             StringTokenizer st = new StringTokenizer(str, " ");
             int a[] = new int[su];
-            while(st.hasMoreElements()){
+            while (st.hasMoreElements()) {
                 a[count] = Integer.parseInt(st.nextToken());
                 count++;
             }
@@ -41,8 +41,8 @@ public class S7810 {
 //                    anw = i;
 //            }
 
-            for(int i = 1; i<= su; i++){
-                if(a[su - i] >= i){
+            for (int i = 1; i <= su; i++) {
+                if (a[su - i] >= i) {
                     anw = i;
                 }
             }

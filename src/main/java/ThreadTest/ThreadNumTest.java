@@ -1,23 +1,27 @@
 package ThreadTest;
 
-class Num{
+class Num {
     private int num;
-    Num(int num){
+
+    Num(int num) {
         this.num = num;
     }
-    public void increadNum(){
+
+    public void increadNum() {
         num++;
     }
-    public int getNum(){
+
+    public int getNum() {
         return num;
     }
 }
 
-class Adder extends Thread{
+class Adder extends Thread {
     private Num num;
     private int loop;
     private String name;
-    Adder(Num num, int loop, String name){
+
+    Adder(Num num, int loop, String name) {
         this.num = num;
         this.loop = loop;
         this.name = name;
@@ -29,16 +33,15 @@ class Adder extends Thread{
             num.increadNum();
         }
     }
-        public void getResult(){
-            System.out.println(name + " : " + num.getNum());
-        }
+
+    public void getResult() {
+        System.out.println(name + " : " + num.getNum());
+    }
 }
 
 
-
-
 public class ThreadNumTest {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         Num num = new Num(5);
         Adder adder1 = new Adder(num, 1000, "adder1");
         Adder adder2 = new Adder(num, 1000, "adder2");
@@ -46,14 +49,14 @@ public class ThreadNumTest {
         adder1.start();
         adder2.start();
 
-        try{
+        try {
             adder1.join();
             adder2.join();
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             adder1.getResult();
             adder2.getResult();
         }
-   }
+    }
 }

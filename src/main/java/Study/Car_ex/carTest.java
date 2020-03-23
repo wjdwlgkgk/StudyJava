@@ -6,15 +6,15 @@ public class carTest {
         Car myCar = new Car();
 
         myCar.name = "Red";
-        myCar.currentGear=0;
-        myCar.currentSpeed=0;
+        myCar.currentGear = 0;
+        myCar.currentSpeed = 0;
 
         Car myCar2 = new Car();
 
-        if(myCar == myCar2)
+        if (myCar == myCar2)
             System.out.println("Same");
 
-        if(myCar.equals(myCar2))
+        if (myCar.equals(myCar2))
             System.out.println("EqualSame");
 
         System.out.println(myCar);

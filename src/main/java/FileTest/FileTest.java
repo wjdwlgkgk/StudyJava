@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 
 public class FileTest {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String str = "E:\\new.txt";
         File f = new File(str);
         System.out.println(f.length());
@@ -15,14 +15,15 @@ public class FileTest {
             fr = new FileReader(str);
 
 
-
-        }catch (Exception e){e.printStackTrace();}
-        finally {
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
             try {
                 fr.close();
-            }catch (Exception e ){e.printStackTrace();}
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
-
 
 
     }

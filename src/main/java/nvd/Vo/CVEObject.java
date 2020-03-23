@@ -15,6 +15,4 @@ public class CVEObject {
     String CVE_data_version;
 
 
-
-
 }

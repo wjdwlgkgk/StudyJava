@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 public class sol {
 
-    static int N,M;
+    static int N, M;
     static int[] map;
     static boolean[] visited;
     static LinkedHashSet<String> set = new LinkedHashSet<String>();
@@ -32,25 +32,25 @@ public class sol {
 
         Arrays.sort(map);
 
-        solve(0,"");
+        solve(0, "");
 
-        for(String s : set) {
-            sb.append(s.substring(0, s.length()-1)+"\n");
+        for (String s : set) {
+            sb.append(s.substring(0, s.length() - 1) + "\n");
         }
         System.out.print(sb.toString());
     }
 
     static void solve(int cnt, String s) {
 
-        if(cnt == M) {
+        if (cnt == M) {
             set.add(s);
-            return ;
+            return;
         }
 
         for (int i = 0; i < N; i++) {
-            if(visited[i]) continue;
+            if (visited[i]) continue;
             visited[i] = true;
-            solve(cnt+1,s+map[i]+" ");
+            solve(cnt + 1, s + map[i] + " ");
             visited[i] = false;
         }
     }

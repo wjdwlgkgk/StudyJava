@@ -7,17 +7,17 @@ import java.util.Scanner;
 
 public class TCPClient {
     public static void main(String[] args) {
-        try{
+        try {
             Socket s = new Socket("localhost", 9999);
             System.out.println("Connected.....");
 
             Scanner sc = new Scanner(System.in);
 
-            while(true){
+            while (true) {
                 String myMsg = sc.nextLine();
 
                 OutputStream os = s.getOutputStream();
-                DataOutputStream dos= new DataOutputStream(os);
+                DataOutputStream dos = new DataOutputStream(os);
 
                 dos.writeUTF(myMsg);
 

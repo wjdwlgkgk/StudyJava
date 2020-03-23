@@ -1,7 +1,6 @@
 package XMLTest;
 
 
-
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
 import javax.xml.transform.Result;
@@ -20,13 +19,13 @@ public class XmlParsing {
 
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        jaxbMarshaller.marshal(user,  file); // ?
+        jaxbMarshaller.marshal(user, file); // ?
         jaxbMarshaller.marshal(user, System.out);
 
 
     }
 
-    public static User setUser(){
+    public static User setUser() {
         User user = new User();
         user.setName("XML");
         user.setAge(22);

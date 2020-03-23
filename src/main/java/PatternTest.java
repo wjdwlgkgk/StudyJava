@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class PatternTest {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
 
         StringBuffer buffer = new StringBuffer();
@@ -22,7 +22,7 @@ public class PatternTest {
         Reader in = new BufferedReader(isr);
         int ch;
         while ((ch = in.read()) > -1) {
-            buffer.append((char)ch);
+            buffer.append((char) ch);
         }
         in.close();
         isr.close();
@@ -35,16 +35,16 @@ public class PatternTest {
     }
 
 
-    public static String hmacAdd(String datas ) throws Exception{
+    public static String hmacAdd(String datas) throws Exception {
         String ALG = "HmacSHA256";
 
         Mac mac;
         String result = "";
         byte[] bytesKey = "!tlzb001secums#123choimh/u0984".getBytes("UTF-8");
-        final SecretKeySpec secretKey = new SecretKeySpec( bytesKey, ALG );
-        mac = Mac.getInstance( ALG);
-        mac.init( secretKey );
-        final byte[] macData = mac.doFinal( datas.getBytes("UTF-8") );
+        final SecretKeySpec secretKey = new SecretKeySpec(bytesKey, ALG);
+        mac = Mac.getInstance(ALG);
+        mac.init(secretKey);
+        final byte[] macData = mac.doFinal(datas.getBytes("UTF-8"));
         String hexText2 = Hex.encodeHexString(macData);
         return hexText2;
     }

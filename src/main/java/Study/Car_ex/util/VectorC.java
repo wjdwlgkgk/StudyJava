@@ -18,17 +18,17 @@ public class VectorC {
         list.addElement(new Double(10.0));
         list.addElement(new String("자바"));
         list.addElement(new Date());
-        list.add(4,new Integer(3)); // index는 최우선 순위를 가지며, 최대 element 갯수보다 큰 값을 index로 넣으면 Exception
+        list.add(4, new Integer(3)); // index는 최우선 순위를 가지며, 최대 element 갯수보다 큰 값을 index로 넣으면 Exception
         System.out.println("저장 후");
         System.out.println("저장 능력 : " + list.capacity());
         System.out.println("저장 요소 개수 : " + list.size());
 
-        if(list.contains("자바")){
+        if (list.contains("자바")) {
             System.out.println("자바 스트링은 " + list.indexOf("자바"));
             System.out.println("번 인덱스에 존재한다.");
         }
         System.out.println("Vector에 저장된 요소들");
-        for(int i = 0 ; i< list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             System.out.println(i + "번째 요소는 " + list.elementAt(i));
         }
     }

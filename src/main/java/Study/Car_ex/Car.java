@@ -4,10 +4,12 @@ public class Car {
     String name;
     int currentSpeed;
     int currentGear;
-    void startEngine(){
+
+    void startEngine() {
         currentSpeed = 1;
     }
-    void changeGear(int gear){
+
+    void changeGear(int gear) {
         currentGear = gear;
     }
 
@@ -19,7 +21,7 @@ public class Car {
         return currentGear;
     }
 
-    void stopEngine(){
+    void stopEngine() {
         currentSpeed = 0;
     }
 }

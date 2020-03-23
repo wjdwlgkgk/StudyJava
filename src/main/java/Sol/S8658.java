@@ -11,25 +11,25 @@ public class S8658 {
 
         int T = Integer.parseInt(br.readLine());
 
-        for(int Test = 1; Test <= T; Test++){
+        for (int Test = 1; Test <= T; Test++) {
             String str = br.readLine();
-            String[] split= str.split(" ");
+            String[] split = str.split(" ");
             int[] IntegerArray = new int[split.length];
-            for(int i = 0 ; i < split.length; i++){
+            for (int i = 0; i < split.length; i++) {
                 IntegerArray[i] = Summation(Integer.parseInt(split[i]));
             }
             Arrays.sort(IntegerArray);
-            sb.append("#" + Test + " " + IntegerArray[IntegerArray.length-1] + " " + IntegerArray[0] + "\n");
+            sb.append("#" + Test + " " + IntegerArray[IntegerArray.length - 1] + " " + IntegerArray[0] + "\n");
         }
         System.out.print(sb);
     }
 
-    public static int Summation(int su){
+    public static int Summation(int su) {
         int R, sum = 0;
-        while(su != 0){
-            R = su%10;
-            sum+=R;
-            su/=10;
+        while (su != 0) {
+            R = su % 10;
+            sum += R;
+            su /= 10;
         }
         return sum;
     }

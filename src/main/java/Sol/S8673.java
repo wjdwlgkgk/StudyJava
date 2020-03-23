@@ -19,7 +19,7 @@ public class S8673 {
             int LengthForArray = (int) Math.pow(2, twoUp);
             int[] IArray = new int[LengthForArray];
             int i = 0;
-            while(tokenizer.countTokens() != 0) {
+            while (tokenizer.countTokens() != 0) {
                 IArray[i] = Integer.parseInt(tokenizer.nextToken());
                 i++;
             }
@@ -28,18 +28,17 @@ public class S8673 {
         System.out.print(sb);
     }
 
-    public static int Sol(int[] IArray ,int LengthForArray , int count) {
+    public static int Sol(int[] IArray, int LengthForArray, int count) {
 
-        if(LengthForArray > 1){
+        if (LengthForArray > 1) {
             int[] SmallIArray = new int[LengthForArray / 2];
             for (int i = 0; i < IArray.length; i += 2) {
                 SmallIArray[i / 2] = Math.max(IArray[i], IArray[i + 1]);
                 count = count + Math.abs(IArray[i] - IArray[i + 1]);
             }
-            LengthForArray/=2;
+            LengthForArray /= 2;
             return Sol(SmallIArray, LengthForArray, count);
-        }
-        else
+        } else
             return count;
     }
 }

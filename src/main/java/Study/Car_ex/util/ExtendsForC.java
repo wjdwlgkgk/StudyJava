@@ -11,7 +11,7 @@ public class ExtendsForC {
         //ex1
         int[] scoreList = {50, 45, 99, 85, 100};
         int scoreSum = 0;
-        for(int score : scoreList){
+        for (int score : scoreList) {
             scoreSum = scoreSum + score;
         }
         System.out.println("합 : " + scoreSum);
@@ -23,7 +23,7 @@ public class ExtendsForC {
         subjectList.add("Servlet");
 
         //접근 변수의 내용을 Generics이용 하는것이 좋음.
-        for(String subject : subjectList){
+        for (String subject : subjectList) {
             System.out.println(subject);
         }
 

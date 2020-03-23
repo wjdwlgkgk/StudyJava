@@ -17,18 +17,19 @@ public class DateTest {
         String today = null;
         Date date = new Date();
         System.out.println(date);
-         SimpleDateFormat format = new SimpleDateFormat("E MMM dd HH:mm:ss", Locale.UK);
+        SimpleDateFormat format = new SimpleDateFormat("E MMM dd HH:mm:ss", Locale.UK);
 
 
-         Calendar cal = Calendar.getInstance(); cal.setTime(date);
-         cal.add(Calendar.MINUTE, 10);
-         today = format.format(cal.getTime());
-         System.out.println("10분후 : " + today);
-         cal.setTime(date);
-         cal.add(Calendar.HOUR, +1);
-         today = format.format(cal.getTime());
-         System.out.println("1시간 후 : " + today); cal.setTime(date);
-
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        cal.add(Calendar.MINUTE, 10);
+        today = format.format(cal.getTime());
+        System.out.println("10분후 : " + today);
+        cal.setTime(date);
+        cal.add(Calendar.HOUR, +1);
+        today = format.format(cal.getTime());
+        System.out.println("1시간 후 : " + today);
+        cal.setTime(date);
 
 
         GregorianCalendar time = new GregorianCalendar();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class programers {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Solution s = new Solution();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -19,14 +19,14 @@ public class programers {
 class Solution {
     public int solution(int n) {
         int answer = 0;
-        for(int i = 2; i<= n; i++){
+        for (int i = 2; i <= n; i++) {
             boolean flag = true;
-            for(int j = 2; j < i; j++){
-                if(i % j == 0){
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
                     flag = false;
                 }
             }
-            if(flag == true){
+            if (flag == true) {
                 answer++;
             }
         }

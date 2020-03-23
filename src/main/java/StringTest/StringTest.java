@@ -6,8 +6,7 @@ public class StringTest {
         String b = new String("abf");
 
 
-
-        if(a==b.intern())
+        if (a == b.intern())
             System.out.println("true");
         else
             System.out.println("false");

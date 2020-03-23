@@ -14,35 +14,35 @@ public class User {
     private List<String> messages;
 
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     @XmlElement
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public int getAge(){
+    public int getAge() {
         return age;
     }
 
     @XmlElement
-    public void setAge(int age){
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public List<String> getMessages(){
+    public List<String> getMessages() {
         return messages;
     }
 
-    @XmlElementWrapper(name="messages")
-    @XmlElement(name="message")
-    public void setMessages(List<String> messages){
+    @XmlElementWrapper(name = "messages")
+    @XmlElement(name = "message")
+    public void setMessages(List<String> messages) {
         this.messages = messages;
     }
 
-    public String toString(){
+    public String toString() {
         String result = "";
         result = "[name : " + name + ", age : " + age + ", messages : " + messages + "]";
 

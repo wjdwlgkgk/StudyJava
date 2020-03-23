@@ -10,13 +10,13 @@ public class kTest {
         int[] answer = new int[commands.length];
         int anCnt = 0;
         int start, end;
-        for(int i = 0 ; i< commands.length; i++){
+        for (int i = 0; i < commands.length; i++) {
             start = commands[i][0];
             end = commands[i][1];
             int count = 0;
-            int a[] = new int[end-start+1];
-            for(int j = start-1 ; j<end; j++){
-                a[count]= array[j];
+            int a[] = new int[end - start + 1];
+            for (int j = start - 1; j < end; j++) {
+                a[count] = array[j];
                 count++;
             }
 
@@ -26,9 +26,9 @@ public class kTest {
             //    if(a[l] > a[m])
             //    }
             // }
-             Arrays.sort(a);
+            Arrays.sort(a);
 
-            answer[anCnt] = a[commands[i][2]-1];
+            answer[anCnt] = a[commands[i][2] - 1];
             anCnt++;
         }
 

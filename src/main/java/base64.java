@@ -21,36 +21,34 @@ public class base64 {
 
 
         //csp 비번 변경.
-        String sePasswd = char2Security("under5001");
-        System.out.println(sePasswd);
+//        String sePasswd = char2Security("under5001");
+        String sePasswd = "6ZOtAyYqRfbTK2ZxxJFQ";
+//        System.out.println(sePasswd);
 
-
-
-//    String base64msg = "29608474dfb0b2299781c834d82181273aea480cfb612b7a74ee00b46edaeecd533ef18745c601da9b5c14809d9f0f8bccd09491d1471add4b1eb84b316e5b25";
-//    String anw = base64Decode(sePasswd);
-//        System.out.println( "decrpyt : " + anw);
+//    String base64msg = "a398b54454cdf3d0976571f8f1d9149ec5a9b4d6e6a5b8d2109e164fdae05b48d163d93ff708400bb19cd05b590764de6e8b7fdef84935ed092c3e108dbe9f27";
+    String anw = base64Decode(sePasswd);
+        System.out.println( "decrpyt : " + anw);
 //        String msg = base64Encode(sePasswd);
 //        System.out.println( "encrypt : " + msg);
 
         //encrypt
-//        String EncryptStr = "192.168.122.198";
+//        String EncryptStr = "jdbc:sqlserver://192.168.152.104:1433;databaseName=SecuMS";
 //        try {
 //            EncryptStr = doEncrypt(EncryptStr);
 //            System.out.println(EncryptStr);
 //        }catch (Exception e) { e.printStackTrace();}
-
+//
         //decode
-        String DecryptStr = "09VaNYHCr7PQcx2djlDjMw==";
-        try {
-            DecryptStr = doDecryptString(DecryptStr);
-            System.out.println(DecryptStr);
-        }catch (Exception e){ e.printStackTrace();}
+//        String DecryptStr = "6ZOtAyYqRfbTK2ZxxJFQ";
+//        System.out.println(DecryptStr.length());
+//        try {
+//            DecryptStr = doDecryptString(DecryptStr);
+//            System.out.println(DecryptStr);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
-
-//    Dc01SOvDkizkVCBr6mDRcw==
-//    famhas51wk9ly5rnI3NbHQ==
-
 
     public static String doDecryptString(String encryptString) {
         if (!ObjectUtils.equals(encryptString, ObjectUtils.NULL)) {
@@ -65,15 +63,12 @@ public class base64 {
     }
 
 
-
-
-
-    public static String doEncrypt(String plainText ) throws Exception{
-        return encrypt(plainText,bKEY,bIV);
+    public static String doEncrypt(String plainText) throws Exception {
+        return encrypt(plainText, bKEY, bIV);
     }
 
-    public static String doDecrypt(String plainText)throws Exception{
-        return decrypt(plainText,bKEY,bIV);
+    public static String doDecrypt(String plainText) throws Exception {
+        return decrypt(plainText, bKEY, bIV);
     }
 
     private static String decrypt(String cipherText, byte[] encryptionKey, byte[] iv)
@@ -97,13 +92,13 @@ public class base64 {
         return Base64.encodeBase64String(cipher.doFinal(plainText.getBytes()));
     }
 
-    public static String char2Security(String passwd){
+    public static String char2Security(String passwd) {
         return DigestUtils.sha512Hex(passwd);
     }
 
     public static String base64Decode(String str) throws IOException {
-        if(str != null && !str.equals("")){
-            str = str.replace("\n","");
+        if (str != null && !str.equals("")) {
+            str = str.replace("\n", "");
             // @@see RFC4648 76 char add CRLF
             str = new String(java.util.Base64.getDecoder().decode(str), "UTF-8");
         }
@@ -111,8 +106,8 @@ public class base64 {
     }
 
     public static String base64Encode(String str) throws IOException {
-        if(str != null && !str.equals("")){
-            str = str.replace("\n","");
+        if (str != null && !str.equals("")) {
+            str = str.replace("\n", "");
             // @@see RFC4648 76 char add CRLF
             str = new String(java.util.Base64.getEncoder().encode(str.getBytes("UTF-8")));
         }

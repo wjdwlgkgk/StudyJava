@@ -25,13 +25,13 @@ public class LinkedListC {
         System.out.println(scoreList.toString());
 
         double sum = 0;
-        for(int i = 0; i< scoreList.size(); i++){
+        for (int i = 0; i < scoreList.size(); i++) {
             sum += scoreList.get(i);
         }
 
         System.out.println("최저 점수 : " + minScore);
         System.out.println("최고 점수 : " + maxScore);
-        System.out.println("평균 점수 : " + (sum/scoreList.size()));
+        System.out.println("평균 점수 : " + (sum / scoreList.size()));
 
 
     }

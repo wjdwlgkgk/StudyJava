@@ -17,17 +17,17 @@ public class MapC {
         //containsKey() 지정한 키가 존재하는지 여부를 반환. containsValue() 지정한 값이 존재하는지 여부를 반환.
         // 순서가 없다.
         HashMap<String, String> map = new HashMap<>();
-        map.put("정길용","010-111-1111");
-        map.put("정길용","010-222-2222"); // 중복 되면 key값에 있는 value를 변경해준다.
-        map.put("강성윤","010-222-2222");
-        map.put("채규태","010-333-3333");
+        map.put("정길용", "010-111-1111");
+        map.put("정길용", "010-222-2222"); // 중복 되면 key값에 있는 value를 변경해준다.
+        map.put("강성윤", "010-222-2222");
+        map.put("채규태", "010-333-3333");
 
         Set<String> keys = map.keySet();
         System.out.println(keys.toString());
 
         Iterator<String> it = keys.iterator();
-        while(it.hasNext()){
-            String key = (String)it.next();
+        while (it.hasNext()) {
+            String key = (String) it.next();
             System.out.println(key + " : " + map.get(key));
         }
     }

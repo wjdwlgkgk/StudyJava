@@ -8,12 +8,12 @@ public class TCPServer1 {
 
     public static void main(String[] args) {
         ServerSocket a;
-        try{
+        try {
             a = new ServerSocket(9999);
             System.out.println("Multi-Server Start !!!...");
 
             Socket b = a.accept();
-            while(true){
+            while (true) {
                 InputStream is = b.getInputStream();
                 DataInputStream ds = new DataInputStream(is);
 
@@ -25,7 +25,7 @@ public class TCPServer1 {
 
                 dos.writeUTF(rcvBuff);
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

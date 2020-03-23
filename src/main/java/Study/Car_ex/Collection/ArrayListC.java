@@ -15,7 +15,7 @@ public class ArrayListC {
         double minScore = 100;
         double maxScore = 0;
         double score = 0;
-        for(int i = 0 ; i < scoreList.size(); i++) {
+        for (int i = 0; i < scoreList.size(); i++) {
             score = scoreList.get(i);
             if (score < minScore) {
                 minScore = score;
@@ -24,18 +24,18 @@ public class ArrayListC {
                 maxScore = score;
             }
         }
-            scoreList.remove(minScore);
-            scoreList.remove(maxScore);
-            System.out.println(scoreList.toString());
+        scoreList.remove(minScore);
+        scoreList.remove(maxScore);
+        System.out.println(scoreList.toString());
 
-            double sum = 0;
-            for(int i = 0 ; i< scoreList.size(); i++){
-                sum += scoreList.get(i);
-            }
+        double sum = 0;
+        for (int i = 0; i < scoreList.size(); i++) {
+            sum += scoreList.get(i);
+        }
         System.out.println("최저 점수 : " + minScore);
         System.out.println("최고 점수 : " + maxScore);
         System.out.println("평균 점수 : " + (sum / scoreList.size()));
 
-        }
+    }
 
 }

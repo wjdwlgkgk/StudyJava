@@ -18,7 +18,7 @@ import org.w3c.dom.Element;
 
 public class CreateXml {
 
-    public static void main (String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder parser = docBuilderFactory.newDocumentBuilder();
@@ -40,12 +40,6 @@ public class CreateXml {
         option.appendChild(propnm);
         option.appendChild(metatype);
         option.appendChild(propvalue);
-
-
-
-
-
-
 
 
         TransformerFactory factory = TransformerFactory.newInstance();

@@ -3,7 +3,7 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class TestTest {
-    public static void main(String[] args) throws  Exception{
+    public static void main(String[] args) throws Exception {
 //        BufferedWriter bw= new BufferedWriter(new OutputStreamWriter(System.out));
 //        bw.write("그아아아아아아아~~~");
 
@@ -20,15 +20,15 @@ public class TestTest {
         String str = sc.nextLine();
         String[] token = str.split(" ");
         StringBuilder answer = new StringBuilder();
-        for(int i = 0 ; i < token.length; i++) {
+        for (int i = 0; i < token.length; i++) {
             StringBuilder sb = new StringBuilder(token[i]);
             for (int j = 0; j < token[i].length(); j++) {
                 if (j % 2 == 0) {
-                    sb.setCharAt(j, (char)(sb.charAt(j) - 32));
+                    sb.setCharAt(j, (char) (sb.charAt(j) - 32));
                 }
             }
 
-            if(i == token.length-1)
+            if (i == token.length - 1)
                 answer.append(sb);
             else
                 answer.append(sb + " ");

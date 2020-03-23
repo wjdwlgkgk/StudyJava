@@ -20,8 +20,8 @@ public class iterator {
 
         double sum = 0;
         Iterator<Double> iterator = scoreList.iterator();
-        while(iterator.hasNext()){
-            sum+=iterator.next();
+        while (iterator.hasNext()) {
+            sum += iterator.next();
         }
         System.out.println("점수 합 : " + sum);
 

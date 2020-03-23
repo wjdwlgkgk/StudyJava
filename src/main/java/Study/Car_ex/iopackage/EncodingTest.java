@@ -2,7 +2,7 @@ package Study.Car_ex.iopackage;
 
 public class EncodingTest {
 
-    public static void main(String[] args)  throws Exception{
+    public static void main(String[] args) throws Exception {
         String str = "가나똠, 펲, 믜, 븨, 뮹, 헿, 뷁";
 
         byte[] defaultBytes = str.getBytes();
@@ -26,7 +26,6 @@ public class EncodingTest {
         System.out.println("utf-16le로 조합 : " + new String(utf16leBytes, "utf-16le"));
         System.out.println("utf-8로 조합 : " + new String(utf8Bytes, "utf-8"));
         System.out.println("latin로 조합 : " + new String(latinBytes, "8859_1"));
-
 
 
     }

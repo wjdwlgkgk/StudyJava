@@ -24,9 +24,9 @@ public class GenericTest {
     }
 
 
-    private static int avgPrice(Vector<Book> bookList){
+    private static int avgPrice(Vector<Book> bookList) {
         int sumPrice = 0;
-        for(Book book : bookList){
+        for (Book book : bookList) {
             sumPrice = sumPrice + book.price;
         }
         int avgPrice = sumPrice / bookList.size();
@@ -36,10 +36,14 @@ public class GenericTest {
 
 }
 
-class Book{
-    int price=0;
-    private void setPrice(int price){ this.price = price; }
-    Book(int price){
+class Book {
+    int price = 0;
+
+    private void setPrice(int price) {
+        this.price = price;
+    }
+
+    Book(int price) {
         this.price = price;
     }
 }

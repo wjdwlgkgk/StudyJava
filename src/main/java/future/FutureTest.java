@@ -11,20 +11,20 @@ import java.util.concurrent.Future;
 
 public class FutureTest {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         new FutureTest().testParallelExecute();
     }
 
-public void testParallelExecute() throws Exception {
-        List<String> testSample = Arrays.asList("가","나","다","라","마","바","사","후후","1","10","100","-100");
+    public void testParallelExecute() throws Exception {
+        List<String> testSample = Arrays.asList("가", "나", "다", "라", "마", "바", "사", "후후", "1", "10", "100", "-100");
         ExecutorService threadPool = Executors.newFixedThreadPool(4);
 
         List<Future<Video>> futures = new ArrayList<Future<Video>>();
-        for(final String sample : testSample){
-            Callable<Video> callable = new Callable<Video>(){
+        for (final String sample : testSample) {
+            Callable<Video> callable = new Callable<Video>() {
                 @Override
-                public Video call() throws Exception{
-                    System.out.println("Time : " + new Date() + "-Thread Name : " + Thread.currentThread().getName() + " - Text : " + sample );
+                public Video call() throws Exception {
+                    System.out.println("Time : " + new Date() + "-Thread Name : " + Thread.currentThread().getName() + " - Text : " + sample);
                     if (Thread.currentThread().getName().equals("pool-1-thread-3")) {
                         Thread.sleep(50);
                     }
@@ -37,12 +37,12 @@ public void testParallelExecute() throws Exception {
         threadPool.shutdown();
 
         List<Video> results = new ArrayList<Video>();
-        for(Future<Video> future : futures){
+        for (Future<Video> future : futures) {
             results.add(future.get());
         }
 
 
-        for (Video result : results){
+        for (Video result : results) {
             System.out.println(result.getDialog());
         }
 
@@ -51,7 +51,7 @@ public void testParallelExecute() throws Exception {
 
 }
 
-class Video{
+class Video {
     String dialog;
 
     public String getDialog() {

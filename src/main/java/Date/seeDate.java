@@ -8,7 +8,7 @@ public class seeDate {
     public static void main(String[] args) {
 
 
-        SimpleDateFormat format1 = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         Date now = new Date();
         Calendar cal = Calendar.getInstance();
@@ -18,8 +18,8 @@ public class seeDate {
 
 
         String time1 = format1.format(cal.getTime());
-        String hour2 = time1.substring(11,13);
-        String minute2 = time1.substring(14,16);
+        String hour2 = time1.substring(11, 13);
+        String minute2 = time1.substring(14, 16);
 
         System.out.println(hour + " : " + minute);
         System.out.println(time1);

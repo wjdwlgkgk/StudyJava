@@ -1,7 +1,7 @@
 package ThreadTest;
 
 
-class VITAMIN extends Thread{
+class VITAMIN extends Thread {
     String name;
 
     @Override
@@ -10,14 +10,13 @@ class VITAMIN extends Thread{
     }
 }
 
-class VITAMIN2 extends VITAMIN{
+class VITAMIN2 extends VITAMIN {
 
     @Override
     public void run() {
         System.out.println("VITAMIN2");
     }
 }
-
 
 
 public class ThreadIntoTest {

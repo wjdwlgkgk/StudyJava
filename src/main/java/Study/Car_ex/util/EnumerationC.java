@@ -16,14 +16,13 @@ public class EnumerationC {
         list.addElement(new Double(10.9));
         list.addElement(new String("자바"));
         System.out.println("요소");
-        for(int i = 0 ; i < list.size(); i++)
-        {
-            System.out.println("list의 "  + i + "번째 요소 : " + list.elementAt(i));
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println("list의 " + i + "번째 요소 : " + list.elementAt(i));
         }
         Enumeration e = list.elements(); // new 연산자를 이용하여 생성할 수 없음.
         System.out.println();
         System.out.println("Vector로 부터 생성한 Enumeration 요소들");
-        while(e.hasMoreElements()){
+        while (e.hasMoreElements()) {
             System.out.println("e의 요소 : " + e.nextElement());
         }
 

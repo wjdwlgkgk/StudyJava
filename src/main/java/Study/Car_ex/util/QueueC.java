@@ -12,7 +12,7 @@ public class QueueC {
         //front를 읽는 작업 : peek => 이는 읽는 작업만 수행함으로 front 값을 변경시키지 않음.
         // Queue는 인터페이스 이기때문에 LinkedList로 선언.
         Queue<String> queue = new LinkedList<String>();
-        for(int i = 1 ; i<= 3; i++)
+        for (int i = 1; i <= 3; i++)
             ((LinkedList<String>) queue).add("데이터-" + i);
 
         System.out.println("가장 앞 : front 값");
