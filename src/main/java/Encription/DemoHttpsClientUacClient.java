@@ -35,7 +35,7 @@ public class DemoHttpsClientUacClient {
 		Calendar cal = Calendar.getInstance();
 		String today = sdf.format(cal.getTime());
 
-		String value = Base64.encodeBase64String(new String("DATA=192.168.123.171||administrator||lsware||"+ today +"&VERSION=1.0").getBytes());
+		String value = Base64.encodeBase64String(new String("DATA=192.168.123.171||administrator||123456789a!||"+ today +"&VERSION=1.0").getBytes());
 
 		send(url, key, value);
 	}

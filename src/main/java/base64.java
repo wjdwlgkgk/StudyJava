@@ -22,31 +22,35 @@ public class base64 {
 
         //csp 비번 변경.
 //        String sePasswd = char2Security("under5001");
-        String sePasswd = "6ZOtAyYqRfbTK2ZxxJFQ";
+//        String sePasswd = "6ZOtAyYqRfbTK2ZxxJFQ";
 //        System.out.println(sePasswd);
 
-//    String base64msg = "a398b54454cdf3d0976571f8f1d9149ec5a9b4d6e6a5b8d2109e164fdae05b48d163d93ff708400bb19cd05b590764de6e8b7fdef84935ed092c3e108dbe9f27";
-    String anw = base64Decode(sePasswd);
-        System.out.println( "decrpyt : " + anw);
-//        String msg = base64Encode(sePasswd);
+//    String base64msg = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+CjxEdW1wIHR5cGU9InRh" +
+//            "YmxlIj4KICAgIDxDb2x1bW5zIGNvdW50PSI0Ij4KICAgICAgICA8Q29sdW1uPlVJRDwvQ29s" +
+//            "dW1uPgogICAgICAgIDxDb2x1bW4+UElEPC9Db2x1bW4+CiAgICAgICAgPENvbHVtbj5QUElE" +
+//            "PC9Db2x1bW4+CiAgICAgICAgPENvbHVtbj5QU05BTUU8L0NvbHVtbj4KICAgIDwvQ29sdW1u" +
+//            "cz4KICAgIDxSb3dzIGNvdW50PSIwIiAvPgo8L0R1bXA+Cg==";
+//    String anw = base64Decode(base64msg);
+//        System.out.println( "decrpyt : " + anw);
+//        String msg = base64Encode(base64msg);
 //        System.out.println( "encrypt : " + msg);
 
         //encrypt
-//        String EncryptStr = "jdbc:sqlserver://192.168.152.104:1433;databaseName=SecuMS";
+//        String EncryptStr = "c:\\network";
 //        try {
 //            EncryptStr = doEncrypt(EncryptStr);
 //            System.out.println(EncryptStr);
 //        }catch (Exception e) { e.printStackTrace();}
-//
+
         //decode
-//        String DecryptStr = "6ZOtAyYqRfbTK2ZxxJFQ";
-//        System.out.println(DecryptStr.length());
-//        try {
-//            DecryptStr = doDecryptString(DecryptStr);
-//            System.out.println(DecryptStr);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        String DecryptStr = "ErE7I6zaZIze4w4LJEcldg==";
+        System.out.println(DecryptStr.length());
+        try {
+            DecryptStr = doDecryptString(DecryptStr);
+            System.out.println(DecryptStr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

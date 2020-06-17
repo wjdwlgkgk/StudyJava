@@ -1,11 +1,13 @@
 package Quartz;
 
+import java.util.Date;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
 
 
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public class QuartzTest {
 
@@ -21,7 +23,28 @@ public class QuartzTest {
             JobDetail jobDetail = new JobDetail("job1", "group1", HelloJob.class);
             CronTrigger trigger1 = new CronTrigger("trigger1", "group1", "3 * * * * ?");
             sched.scheduleJob(jobDetail, trigger1);
-            Thread.sleep(1000);
+
+
+//            JobDetail jobDetail = new JobDetail("job1", "group1", HelloJob.class);
+//            CronTrigger trigger1 = new CronTrigger("trigger1", "group1", "3 * * * * ?");
+//            sched.scheduleJob(jobDetail, trigger1);
+//
+//            JobDetail jobDetail = new JobDetail("job1", "group1", HelloJob.class);
+//            CronTrigger trigger1 = new CronTrigger("trigger1", "group1", "3 * * * * ?");
+//            sched.scheduleJob(jobDetail, trigger1);
+//
+//
+//            JobDetail jobDetail = new JobDetail("job1", "group1", HelloJob.class);
+//            CronTrigger trigger1 = new CronTrigger("trigger1", "group1", "3 * * * * ?");
+//            sched.scheduleJob(jobDetail, trigger1);
+
+
+            long time = System.currentTimeMillis();
+            SimpleDateFormat dayTime = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+            String str = dayTime.format(new Date(time));
+            System.out.println("[" + str + "]" + "job Enroll");
+
+
         } catch (SchedulerException e) {
 
         } catch (ParseException e) {
